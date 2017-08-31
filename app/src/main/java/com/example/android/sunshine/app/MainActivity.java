@@ -23,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.forecastfragment, menu);
         return true;
     }
 
@@ -34,8 +35,14 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+
+        switch (id) {
+            case 1:
+                id = R.id.action_settings;
+                return true;
+            case 2:
+                id = R.id.action_refresh;
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

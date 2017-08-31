@@ -19,6 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="Detail Activity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="com.example.android.sunshine.app"
+                android:value="com.example.android.sunshine.app"
+
+                />
+        </activity>
     </application>
 
 </manifest>
